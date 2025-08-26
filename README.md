@@ -8,7 +8,7 @@ This is a basic Java web application that uses an **embedded Jetty server** and 
 
 - Java-based web app with no external application server required
 - Embedded Jetty for easy deployment and testing
-- Basic CRUD operations using Servlets and JSP or raw HTML
+- Basic CRUD operations using Servlets and JSP (or raw HTML)
 - Lightweight structure — no Spring or heavy frameworks
 
 ---
@@ -23,10 +23,7 @@ This is a basic Java web application that uses an **embedded Jetty server** and 
 ├── index.jsp # Homepage
 ├── form.jsp # Add/Edit form
 └── list.jsp # Display data
-/pom.xml (for Maven dependencies)
 
-yaml
-Copy code
 
 ---
 
@@ -35,29 +32,29 @@ Copy code
 - Java SE 8+
 - Embedded Jetty Server
 - JSP + Servlets
-- Maven (for build & dependencies)
+- Maven (for build & dependency management)
 
 ---
 
 ## ▶️ How to Run
 
-1. **Clone the repository**
+### 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/yourusername/jetty-crud-app.git
-   cd jetty-crud-app
-Build the project with Maven
-
-bash
-Copy code
+```bash
+git clone https://github.com/yourusername/jetty-crud-app.git
+cd jetty-crud-app
 mvn clean install
-Run the app
-
-bash
-Copy code
 mvn exec:java
-Open your browser and go to:
 
-arduino
-Copy code
+##port
 http://localhost:8080/
+
+📌 CRUD Functionalities
+
+Create – Add a new item via a form
+
+Read – List all items
+
+Update – Edit existing items
+
+Delete – Remove items
