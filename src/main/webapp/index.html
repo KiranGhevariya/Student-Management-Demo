@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    input, button {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    #resetBtn {
+      background: #f44336;
+    }
+
+    #resetBtn:hover {
+      background: #d32f2f;
+    }
+
+    /* Table Styling */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table thead {
+      background: #4CAF50;
+      color: white;
+    }
+
+    table th, table td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    table tbody tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+
+    table tbody tr:hover {
+      background: #f1f1f1;
+    }
+
+    .action-btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .edit-btn {
+      background: #2196F3;
+      color: white;
+    }
+
+    .edit-btn:hover {
+      background: #1976D2;
+    }
+
+    .delete-btn {
+      background: #f44336;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background: #d32f2f;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management</h1>
+    <form id="studentForm">
+      <input type="hidden" id="studentId">
+      <input placeholder="Name" id="name" required>
+      <input placeholder="Email" id="email" type="email" required>
+      <input placeholder="Course" id="course" required>
+      <button type="submit">Save</button>
+      <button type="button" id="resetBtn">Reset</button>
+    </form>
+
+    <h2>Students</h2>
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>ID</th><th>Name</th><th>Email</th><th>Course</th><th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows will be added dynamically -->
+      </tbody>
+    </table>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
